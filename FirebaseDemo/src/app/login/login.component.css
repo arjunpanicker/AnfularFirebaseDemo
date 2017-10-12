@@ -41,7 +41,7 @@ hr {
 }
 
 .btn-custom{
-    background: transparent;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .btn-custom[type="submit"] {

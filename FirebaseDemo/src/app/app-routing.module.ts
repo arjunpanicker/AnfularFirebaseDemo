@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login';
 import { SignupComponent } from './signup';
 import { NotFoundComponent } from './not-found';
+import { DashboardComponent } from './dashboard';
+
+import { AuthGuardService } from './_services';
 
 const routes: Routes = [
     {
@@ -19,8 +22,13 @@ const routes: Routes = [
         component: NotFoundComponent
     },
     {
+        path: 'dashboard',
+        component: DashboardComponent,
+        canActivate: [ AuthGuardService ]
+    },
+    {
         path: '',
-        redirectTo: 'login',
+        redirectTo: 'dashboard',
         pathMatch: 'full'
     },
     {
