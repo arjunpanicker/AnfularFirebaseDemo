@@ -4,12 +4,13 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import * as admin from 'firebase-admin';
+// import * as admin from 'firebase-admin';
+import { LoginModule } from './login/login.module';
 
-import * as serviceAccount from '../assets/fir-demo-a2ea1-firebase-adminsdk-rrliq-f91a8634c4.json';
+// import * as serviceAccount from '../assets/fir-demo-a2ea1-firebase-adminsdk-rrliq-f91a8634c4.json';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
+// import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
@@ -23,7 +24,6 @@ import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     SignupComponent,
     NotFoundComponent,
     DashboardComponent,
@@ -34,6 +34,7 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
+    LoginModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule
